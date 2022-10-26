@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import './App.css';
 import { MenuAnimation } from './Menu';
-import { BrowserRouter as Route, Routes, BrowserRouter} from "react-router-dom";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 import { Home } from './pages/home';
 import { About } from './pages/about';
 
