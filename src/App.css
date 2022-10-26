@@ -1,4 +1,4 @@
-.App {
+App {
   text-align: center;
 }
 
@@ -8,9 +8,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
 }
 
 .App-header {
@@ -28,11 +26,193 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.body{
+  background-color: black;
+}
+
+body{
+  background-color: rgb(20, 20, 20);
+}
+
+#menu{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#tag-items{
+  margin-left: clamp(2rem, 10vw, 24rem);
+  position: relative;
+}
+
+.menu-item, .plain-text{
+  color: white;
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-family: 'Courier New', Courier, monospace;
+
+  display:block;
+  text-decoration: none;
+  padding: clamp(0.25rem, 0.5vw, 1rem), 0rem;
+
+  transition: opacity 400ms ease,
+              color 400ms ease;
+}
+
+.about-text, .about-header{
+  color: white;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 10%;
+
+  display:block;
+  text-decoration: none;
+  padding: clamp(0.25rem, 0.5vw, 1rem), 0rem;
+}
+
+.about-header{
+  margin-left: 5%;
+}
+
+.plain-text{
+  color:white;
+}
+
+.tag-text{
+  color: white;
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-family: 'Courier New', Courier, monospace;
+  
+  transition: opacity 400ms ease,
+              color 400ms ease;
+}
+
+#menu-items{
+  margin-left: clamp(2rem, 10vw, 24rem);
+  position: relative;
+  z-index: 2;
+}
+
+#menu-items:hover > .menu-item{
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover{
+  color: white;
+  opacity: 1;
+}
+
+#tag-items:hover > .plain-text{
+  color: red;
+}
+
+.menu-item:hover > .tag-text{
+  color: green;
+}
+
+.white-text{
+  color: white;
+}
+
+#menu-background-pattern{
+  height: 100vh;
+  width: 100vw;
+
+  /*background-image:radial-gradient(
+    rgba(2255,255,255,0.1) 9%,
+    transparent 9%
+  );*/
+  background-position: 0% 0%;
+  background-size: 12vmin 12vmin;
+
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+
+  transition: opacity 800ms ease,
+              background-size 800ms ease,
+              background-position 800ms ease;
+
+}
+
+#menu-items:hover ~ #menu-background-pattern{
+  background-size: 11vmin 11vmin;
+  opacity: 0.5;
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+  background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+  background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+  background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern {
+  background-position: 0% -100%;
+}
+
+#menu[data-active-index="4"] > #menu-background-pattern {
+  background-position: 0% -125%;
+}
+
+#menu[data-active-index="5"] > #menu-background-pattern {
+  background-position: 0% -150%;
+}
+
+
+
+#menu-background-image{
+  height: 100%;
+  width: 100%;
+
+  background-image: url(../Images/image1.png);
+
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+
+  transform: scaleX(-1) scale(120%);
+
+  background-position: center 0%;
+  background-size: 110vmax;
+  opacity: 0.20;
+
+  transition: opacity 800ms ease,
+              background-size 800ms ease,
+              background-position 800ms ease;
+}
+
+#tag-items:hover ~ #menu-background-image{
+    background-size: 100vmax;
+    opacity: 0.05;
+}
+
+#menu[data-active-index="0"] > #menu-background-image {
+  background-position: 0% 15%;
+}
+
+#menu[data-active-index="1"] > #menu-background-image {
+  background-position: 0% 30%;
+}
+
+#menu[data-active-index="2"] > #menu-background-image {
+  background-position: 0% 45%;
+}
+
+#menu[data-active-index="3"] > #menu-background-image {
+  background-position: 0% 60%;
+}
+
+#menu[data-active-index="4"] > #menu-background-image {
+  background-position: 0% 75%;
+}
+
+#menu[data-active-index="5"] > #menu-background-image {
+  background-position: 0% 90%;
 }
