@@ -1,4 +1,11 @@
-export function Home(){
+import { Component } from "react";
+import { MenuAnimation } from "../Menu";
+
+export class Home extends Component{
+    componentDidMount(){
+        MenuAnimation();
+      }
+    render(){
     return (
         <div id="menu">
           <div id="tag-items">
@@ -16,5 +23,5 @@ export function Home(){
           <div id="menu-background-pattern"/>
           <div id="menu-background-image"/>
         </div>
-      );
+      )};
 }

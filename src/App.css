@@ -58,19 +58,35 @@ body{
               color 400ms ease;
 }
 
-.about-text, .about-header{
+.about-text, .about-header, .mail-text{
   color: white;
   font-size: clamp(2rem, 4vw, 4rem);
   font-family: 'Courier New', Courier, monospace;
-  margin-left: 10%;
+  margin-left: clamp(4rem, 20vw, 48rem);
 
   display:block;
   text-decoration: none;
   padding: clamp(0.25rem, 0.5vw, 1rem), 0rem;
 }
 
+.mail-text:hover > .mail-tag{
+  color:green;
+}
+
+.mail-text{
+  margin-bottom: 3vh;
+}
+
+#mail-text:hover{
+  color:white;
+}
+
+#mail-text:hover > .about-text{
+  color: black;
+}
+
 .about-header{
-  margin-left: 5%;
+  margin-left: clamp(2rem, 10vw, 24rem);
 }
 
 .plain-text{
