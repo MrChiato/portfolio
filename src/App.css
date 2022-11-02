@@ -35,13 +35,11 @@ body{
 }
 
 #menu{
-  height: 100vh;
   display: flex;
   align-items: center;
 }
 
 #tag-items{
-  margin-left: clamp(2rem, 10vw, 24rem);
   position: relative;
 }
 
@@ -127,6 +125,10 @@ body{
 
 .white-text{
   color: white;
+}
+
+.aboutTextDiv{
+  width: 80%;
 }
 
 #menu-background-pattern{
@@ -231,4 +233,19 @@ body{
 
 #menu[data-active-index="5"] > #menu-background-image {
   background-position: 0% 90%;
+}
+
+@media (max-width:450px) {
+  #menu-items{
+    margin-left: auto !important;
+  }
+  .about-text{
+    margin-left: auto;
+  }
+  .mail-text, .about-header{
+    margin-left: auto;
+  }
+  .aboutTextDiv{
+    width: 100%;
+  }
 }
